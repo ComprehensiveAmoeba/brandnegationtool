@@ -11,7 +11,7 @@ The Brand Negatives in OPs Tool is a Streamlit app designed to streamline the pr
 
 ## How to Use
 1. **Access the App**: Open the [Brand Negatives in OPs Tool](https://brandnegationtool.streamlit.app/) in your web browser.
-2. **Upload a File**: Use the file uploader to select and upload your Excel file in `.xlsx` format.
+2. **Upload a Sponsored Products Campaigns Bulk Sheet - L60ds, no need to include campaigns with 0 impressions**: Use the file uploader to select and upload your Excel file in `.xlsx` format.
 3. **Specify ASINs and Brand IDs**: Enter the ASINs and Brand IDs to be used for filtering. ASINs should be entered one per line, and Brand IDs should also be listed one per line.
 4. **Generate Report**: Click the "Generate Negative Product Targetings" button to process your data.
 5. **Download the Results**: After processing, a link to download the Excel file will be provided. This file includes the details of your negative product targeting setup, named with a timestamp to denote the creation time.
