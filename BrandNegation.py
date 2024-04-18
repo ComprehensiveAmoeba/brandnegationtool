@@ -25,9 +25,8 @@ def process_file(uploaded_file, all_asins, asin_list, brand_ids):
     pattern = '|'.join(asin_list)  # Joins all ASINs with '|' which acts as an OR in regex
     df = df[df['Ad Group Name'].str.contains(pattern, na=False)]
 
-
     # Prepare output DataFrame
-    result = pd.DataFrame()
+    rows = []
     for _, row in df.iterrows():
         for brand_id in brand_ids:
             new_row = {
@@ -41,8 +40,9 @@ def process_file(uploaded_file, all_asins, asin_list, brand_ids):
                 "Product Targeting Expression": brand_id,
                 "Campaign Name (Informational only)": row["Campaign Name (Informational only)"]
             }
-            result = result.append(new_row, ignore_index=True)
+            rows.append(new_row)
 
+    result = pd.DataFrame(rows)
     return result
 
 def main():
